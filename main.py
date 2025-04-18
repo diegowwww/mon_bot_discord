@@ -11,10 +11,10 @@ intents.guilds = True
 intents.members = True
 intents.reactions = True
 
-TOKEN = os.getenv("MTM1Njc1MDc4NjQzNjI3MjI3MQ.G8PGgH.6dB2OEDB99377MvCba7R04Fgqc6wCKH9XfeCic")
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 bot = commands.Bot(command_prefix="!", intents=intents)     
-presence_manager = PresenceManager()
+presence_manager = PresenceManager(bot)
 
 @bot.event
 async def on_ready():
